@@ -1,5 +1,7 @@
 repos:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.4
+    rev: v8.18.4  # Use latest version
     hooks:
       - id: gitleaks
+        args: ['--verbose', '--redact', '--source=.']
+        stages: [commit]
